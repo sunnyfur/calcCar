@@ -1,0 +1,46 @@
+.formbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formCalc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin: auto;
+}
+
+.select_hide {
+  display: none;
+}
+
+.form__fieldset {
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__fieldset_hor {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.formCalc__select {
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */

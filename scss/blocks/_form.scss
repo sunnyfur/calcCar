@@ -1,0 +1,29 @@
+.formbody {
+    display: flex;
+}
+
+.formCalc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+}
+
+.select_hide {
+    display: none;
+}
+
+.form__fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__fieldset_hor {
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.formCalc__select {
+    width: 50%;
+}

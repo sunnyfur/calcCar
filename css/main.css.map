@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AKAA,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,GAAG,EAAE,IAAI;EACT,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,eAAe,CAAC;EACZ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACzB;;AAED,AAAA,mBAAmB,CAAC;EAChB,cAAc,EAAE,GAAG;EACnB,UAAU,EAAE,IAAI;CACnB;;AAED,AAAA,iBAAiB,CAAC;EACd,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/_fonts.scss",
+        "../scss/_vars.scss",
+        "../scss/_mixins.scss",
+        "../scss/_typography.scss",
+        "../scss/blocks/_form.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+
+
+    <title>Главная</title>
+</head>
+
+<body class="formbody">
+    <form class="formCalc">
+        <h1>Комплектация Skoda Kodiaq. Расчет стоимости</h1>
+        <fieldset class="form__fieldset">
+
+            <label for="idStyle">Комплектация</label>
+            <select name="style" class="formCalc__select" id="idStyle">
+                <option value="Active" data-cost="1962000">Active</option>
+                <option value="Ambition" data-cost="2196000">Ambition</option>
+                <option value="Style" data-cost="2426000">Style</option>
+            </select>
+        </fieldset>
+        <fieldset class="form__fieldset">
+            <label for="idengineForActive">Комплектация</label>
+            <select name="engineForActive" class="formCalc__select" id="idengineForActive">
+            </select>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset_hor">
+            <legend>Коробка</legend>
+            <div>
+                <input type="radio" name="transmission" value="mechanic" id="idMechanic" checked data-cost="0">
+                <label for="idMechanic">МКПП-6</label>
+            </div>
+            <div>
+                <input type="radio" name="transmission" value="automate" id="idAutomate" data-cost="20000">
+                <label for="idAutomate">DSG-6</label>
+            </div>
+            <div>
+                <input type="radio" name="transmission" value="automate7" id="idAutomate7" data-cost="30000" disabled>
+                <label for="idAutomate7">DSG-7</label>
+            </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset_hor">
+            <legend>Привод</legend>
+            <div>
+                <input type="checkbox" data-cost="110000" id="id4x4">
+                <label for="id4x4">4x4</label>
+            </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset_hor">
+            <legend>Год выпуска</legend>
+            <div>
+                <input type="radio" name="year" value="2021" id="idYear21" data-cost="-200000">
+                <label for="idYear21">2021</label>
+            </div>
+            <div>
+                <input type="radio" name="year" value="2022" id="idYear22" checked data-cost="0">
+                <label for="idYear22">2022</label>
+            </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset_hor">
+            <div>
+                <input type="radio" name="typeFuel" value="petrol" id="idPetrol" checked data-cost="0">
+                <label for="idPetrol">бензин</label>
+            </div>
+            <div>
+                <input type="radio" name="typeFuel" value="petrol" id="idDiesel" data-cost="300000">
+                <label for="idDiesel">дизель</label></div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+            <legend>Дополнительные опции</legend>
+            <div>
+                <input type="checkbox" data-cost="50000" id="idTires">
+                <label for="idTires">Комплект резины</label>
+            </div>
+            </А>
+            <h2 class="result"></h2>
+    </form>
+
+    <script src="js/validation.js"></script>
+    <script src="js/calc.js"></script>
+
+</body>
+
+</html>
