@@ -40,7 +40,7 @@ function valuesEngine() {
 }
 const setValuesEngine = valuesEngine();
 setValuesEngine();
-document.querySelector("[name='style']").addEventListener('change', (e) => {
+document.querySelector("form").addEventListener('change', (e) => {
 
     let select = document.querySelector('[name=engineForActive]');
     let val = (e.target).querySelector("option:checked").value;
@@ -50,37 +50,36 @@ document.querySelector("[name='style']").addEventListener('change', (e) => {
 
 
 const selectionsAll = document.querySelectorAll("select");
-for (let select of selectionsAll) {
-    select.addEventListener('change', () => {
-        let style = document.querySelector('[name=style]').value;
-        let engine = document.querySelector('[name=engineForActive]').value;
-        let transmissions = document.querySelectorAll('[name=transmission]');
-        let drive = document.getElementById("id4x4");
 
-        if ((style == "Ambition" || style == "Style") && (engine == "TSI180" || engine == "TDI150")) {
-            for (transmission of transmissions) {
-                if (transmission.matches("[value='automate7']")) {
-                    transmission.disabled = false;
-                    transmission.checked = true;
-                } else {
-                    transmission.disabled = true;
-                }
-            };
-            drive.checked = "true";
-            drive.disabled = true;
-        } else {
-            for (transmission of transmissions) {
-                if (transmission.matches("[value='automate7']")) {
-                    transmission.disabled = true;
+select.addEventListener('change', () => {
+    let style = document.querySelector('[name=style]').value;
+    let engine = document.querySelector('[name=engineForActive]').value;
+    let transmissions = document.querySelectorAll('[name=transmission]');
+    let drive = document.getElementById("id4x4");
 
-                } else {
-                    transmission.disabled = false;
-                }
-
-            };
-            transmissions[0].checked = true;
-            drive.disabled = false;
+    if ((style == "Ambition" || style == "Style") && (engine == "TSI180" || engine == "TDI150")) {
+        for (transmission of transmissions) {
+            if (transmission.matches("[value='automate7']")) {
+                transmission.disabled = false;
+                transmission.checked = true;
+            } else {
+                transmission.disabled = true;
+            }
         };
+        drive.checked = "true";
+        drive.disabled = true;
+    } else {
+        for (transmission of transmissions) {
+            if (transmission.matches("[value='automate7']")) {
+                transmission.disabled = true;
 
-    })
-};
+            } else {
+                transmission.disabled = false;
+            }
+
+        };
+        transmissions[0].checked = true;
+        drive.disabled = false;
+    };
+
+})
