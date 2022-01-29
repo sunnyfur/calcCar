@@ -21,7 +21,7 @@ function valuesEngine() {
         let enginesList = [];
         for (let engine of engines) {
             if (value == engine[0]) {
-                enginesList = engine[1]
+                enginesList = [...engine[1]];
                 break;
             }
         };
@@ -55,6 +55,7 @@ for (let select of selectionsAll) {
         let style = document.querySelector('[name=style]').value;
         let engine = document.querySelector('[name=engineForActive]').value;
         let transmissions = document.querySelectorAll('[name=transmission]');
+        let drive = document.getElementById("id4x4");
 
         if ((style == "Ambition" || style == "Style") && (engine == "TSI180" || engine == "TDI150")) {
             for (transmission of transmissions) {
@@ -65,6 +66,8 @@ for (let select of selectionsAll) {
                     transmission.disabled = true;
                 }
             };
+            drive.checked = "true";
+            drive.disabled = true;
         } else {
             for (transmission of transmissions) {
                 if (transmission.matches("[value='automate7']")) {
@@ -76,6 +79,7 @@ for (let select of selectionsAll) {
 
             };
             transmissions[0].checked = true;
+            drive.disabled = false;
         };
 
     })
